@@ -12,3 +12,12 @@ def getAllSeries():
         seriesNames.append(series)
 
     return seriesNames
+
+def addNewSeries(seriesname):
+    series = {"name" : seriesname}
+    series_id = database.overview.insert(series)
+
+def removeSeries(seriesname):
+
+    series = {"name" : seriesname}
+    database.overview.remove(series)

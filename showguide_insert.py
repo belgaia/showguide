@@ -1,4 +1,5 @@
 #!/Python34/python
+import cgi
 import mongodbConnector
 
 print("Content-type: text/html")
@@ -10,10 +11,6 @@ print("<h1>Show Guide Insert Form</h1>")
 print("<h2>Informationen erfassen</h2>")
 print("<h3>Allgemein</h3>")
 print()
-
-print("<form action='showguide_insert.py' method='post'>")
-print("Add new series: <input name='new_series' type='text'>")
-print("<input type='submit' value='Add Series'/>")
 
 print("<p><table width=50% border=0><tr>")
 

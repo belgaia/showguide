@@ -10,7 +10,5 @@ def getAllSeries():
     for document in database.overview.find():
         series = document['name']
         seriesNames.append(series)
-        seriesNames.append('\n')
-        #print(series)
 
     return seriesNames

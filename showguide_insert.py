@@ -11,17 +11,19 @@ print("<h2>Informationen erfassen</h2>")
 print("<h3>Allgemein</h3>")
 print()
 
-for showname in series:
-	print(showname)
+print("<form action='showguide_insert.py' method='post'>")
+print("Add new series: <input name='new_series' type='text'>")
+print("<input type='submit' value='Add Series'/>")
 
 print("<p><table width=50% border=0><tr>")
+
 print("<td>Serie:</td><td>")
 print("<select name='series_choice' size='1'>")
 for showname in series:
 	print("<option>" + showname + "</option>")
 print("</select>")
 print("</td></tr>")
-print("<td>Serie:</td><td><input name='series' type='text'></td></tr>")
+
 print("<td>Staffel:</td><td><input name='season' type='text'></td></tr>")
 print("<td>Folgennummer:</td><td><input name='episode' type='text'></td></tr>")
 print("<td>Gesamtfolgennummer:</td><td><input name='generalepisode' type='text'></td></tr>")

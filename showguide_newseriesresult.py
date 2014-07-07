@@ -2,7 +2,7 @@
 import cgi
 import mongodbConnector
 
-print("Content-type: text/html")
+print("Content-type: text/html; charset=utf8")
 print()
 
 form = cgi.FieldStorage()

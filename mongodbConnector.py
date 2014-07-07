@@ -47,3 +47,8 @@ def getEpisodeguide(series):
     seriesName = seriesName.replace(' ', '')
     documents = database[seriesName].find()
     return documents;
+
+series = Series()
+series.name = "TestSerie"
+series.content = "Test content mit Umlauten ä, ü, ö, ß."
+createInfo(series)

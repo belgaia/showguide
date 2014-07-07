@@ -1,7 +1,7 @@
 #!/Python34/python
 import mongodbConnector
 
-print("Content-type: text/html")
+print("Content-type: text/html; charset=utf8")
 print()
 print("<h1>Show Guide Overview</h1>")
 print("<h2>Informationen anzeigen</h2>")

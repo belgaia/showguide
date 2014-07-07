@@ -2,7 +2,7 @@
 import mongodbConnector
 import cgi
 
-print("Content-type: text/html")
+print("Content-type: text/html; charset=utf8")
 print()
 
 print("<form action='showguide_newseriesresult.py' method='post'>")

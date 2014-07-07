@@ -40,3 +40,10 @@ def createInfo(series):
     seriesname = series.name.lower()
     seriesname = seriesname.replace(" ", "")
     series_id = database[seriesname].insert(seriesObject)
+
+def getEpisodeguide(series):
+
+    seriesName = series.lower()
+    seriesName = seriesName.replace(' ', '')
+    documents = database[seriesName].find()
+    return documents;

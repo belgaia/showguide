@@ -22,7 +22,7 @@ entry.actors = form.getvalue("actors")
 entry.content = form.getvalue("content")
 entry.director = form.getvalue("director")
 
-mongodbConnector.createEntry(entry)
+mongodbConnector.createInfo(entry)
 
 print()
 print("<p>")

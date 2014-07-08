@@ -2,6 +2,7 @@
 import cgi
 import mongodbConnector
 from series import Series
+import helper
 
 print("Content-type: text/html; charset=utf8")
 print()
@@ -27,17 +28,17 @@ mongodbConnector.createInfo(entry)
 print()
 print("<p>")
 print("<p><table width=50% border=0><tr>")
-print("<td>Serie:</td><td>" + entry.name + "</td></tr>")
+print("<td>Serie:</td><td>" + helper.replaceUmlaute(entry.name) + "</td></tr>")
 print("<td>Staffel:</td><td>" + entry.season + "</td></tr>")
 print("<td>Folgennummer:</td><td>" + entry.episodenumber + "</td></tr>")
 print("<td>Gesamtfolgennummer:</td><td>" + entry.generalepisodenumber + "</td></tr>")
 print("<td>DVD Nummer:</td><td>" + entry.dvdnumber + "</td></tr>")
 print("<td>DVD Folgennummer:</td><td>" + entry.dvdepisodenumber + "</td></tr>")
-print("<td>Folgenname (Deutsch):</td><td>" + entry.episodename_de + "</td></tr>")
-print("<td>Folgenname (Englisch):</td><td>" + entry.episodename_en + "</td></tr>")
-print("<td>Darsteller:</td><td>" + entry.actors + "</td></tr>")
-print("<td>Inhalt:</td><td>" + entry.content.encode(encoding='utf8') + "</td></tr>")
-print("<td>Regie:</td><td>" + entry.director + "</td></tr>")
+print("<td>Folgenname (Deutsch):</td><td>" + helper.replaceUmlaute(entry.episodename_de) + "</td></tr>")
+print("<td>Folgenname (Englisch):</td><td>" + helper.replaceUmlaute(entry.episodename_en) + "</td></tr>")
+#print("<td>Darsteller:</td><td>" + entry.actors + "</td></tr>")
+print("<td>Inhalt:</td><td>" + helper.replaceUmlaute(entry.content) + "</td></tr>")
+print("<td>Regie:</td><td>" + entry.director+ "</td></tr>")
 print("</table>")
 print("</p>")
 

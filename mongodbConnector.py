@@ -26,6 +26,7 @@ def removeSeries(seriesname):
 def createInfo(series):
 
     seriesObject = {"name" : series.name,
+                    "identifier" : series.season + "x" + series.episodenumber,
                     "season" : series.season,
                     "episode_number" : series.episodenumber,
                     "general_episodenumber" : series.generalepisodenumber,

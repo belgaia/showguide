@@ -3,6 +3,7 @@ __author__ = 'Agile Developers'
 class Series():
     name = ""
     season = ""
+    identifier = ""
     episodenumber = ""
     generalepisodenumber = ""
     dvdnumber = ""

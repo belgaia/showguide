@@ -1,7 +1,9 @@
+from persistence import mongodbConnector
+
 __author__ = 'Agile Developers'
 
 from unittest import TestCase
-import mongodbConnector
+
 
 class TestMongoDbConnector(TestCase):
 

@@ -1,5 +1,5 @@
 #!/Python34/python
-import mongodbConnector
+from persistence import mongodbConnector
 
 print("Content-type: text/html; charset=utf8")
 print()

@@ -1,8 +1,10 @@
 #!/Python34/python
 import cgi
-import mongodbConnector
+
+from persistence import mongodbConnector
 from series import Series
 import helper
+
 
 print("Content-type: text/html; charset=utf8")
 print()

@@ -1,6 +1,4 @@
 #!/Python34/python
-import mongodbConnector
-import cgi
 
 print("Content-type: text/html; charset=utf8")
 print()

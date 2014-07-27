@@ -1,7 +1,7 @@
 #!/Python34/python
 import cgi
 
-from persistence import mongodbConnector
+import mongodbConnector
 from series import Series
 import helper
 
@@ -46,6 +46,6 @@ print("</p>")
 
 
 print("<p>")
-print("<a href='/showguide/showguide_insert.py'>Insert Formular</a><br>")
-print("<a href='/showguide/showguide_addseries.py'>Add Series Formular</a><br>")
+print("<a href='showguide_insert.py'>Insert Formular</a><br>")
+print("<a href='showguide_addseries.py'>Add Series Formular</a><br>")
 print("</p>")

@@ -1,5 +1,5 @@
 #!/Python34/python
-from persistence import mongodbConnector
+import mongodbConnector
 
 series = mongodbConnector.getAllSeries()
 

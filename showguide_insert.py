@@ -1,5 +1,5 @@
 #!/Python34/python
-from persistence import mongodbConnector
+import mongodbConnector
 
 print("Content-type: text/html; charset=utf8")
 print()
@@ -11,7 +11,7 @@ print("<h2>Informationen erfassen</h2>")
 print("<h3>Allgemein</h3>")
 print()
 
-print("<a href='/showguide/showguide_addseries.py'>Add new Series</a>")
+print("<a href='showguide_addseries.py'>Add new Series</a>")
 
 print("<form action='showguide_insertresult.py' method='post'>")
 print("<p><table width=50% border=0><tr>")

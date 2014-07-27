@@ -14,8 +14,9 @@ def getAllSeries():
 
     return seriesNames
 
-def addNewSeries(seriesname):
+def addNewSeries(seriesname, description):
     series = {"name" : seriesname}
+    series = {"description" : description}
     series_id = database.overview.insert(series)
 
 def removeSeries(seriesname):

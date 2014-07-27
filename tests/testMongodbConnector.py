@@ -1,4 +1,4 @@
-from persistence import mongodbConnector
+import mongodbConnector
 
 __author__ = 'Agile Developers'
 

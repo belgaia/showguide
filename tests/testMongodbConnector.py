@@ -3,6 +3,7 @@ import mongodbConnector
 __author__ = 'Agile Developers'
 
 from unittest import TestCase
+from show import Show
 
 
 class TestMongoDbConnector(TestCase):
@@ -18,10 +19,8 @@ class TestMongoDbConnector(TestCase):
 
     def test_saveNewSeries(self):
 
-        self.series = "Testserie"
+        self.show = Show()
+        self.show.name = "Testserie"
+        self.show.description = "Description of the Testserie"
 
-        print("saveNewSeries test")
-
-        mongodbConnector.addNewSeries(self.series)
-
-        mongodbConnector.removeSeries(self.series)
+        mongodbConnector.addNewShow(self.show)

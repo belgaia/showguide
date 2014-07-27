@@ -14,10 +14,17 @@ def getAllSeries():
 
     return seriesNames
 
-def addNewSeries(seriesname, description):
-    series = {"name" : seriesname}
-    series = {"description" : description}
-    series_id = database.overview.insert(series)
+def addNewShow(show):
+    #series = {"name" : seriesname}
+    #series = {"description" : description}
+    #series_id = database.overview.insert(series)
+
+    showObject = {"name" : show.name,
+                  "description" : show.description
+    }
+
+    show._id = database.overview.insert(showObject)
+    return show._id
 
 def removeSeries(seriesname):
 
@@ -38,7 +45,7 @@ def createInfo(series):
                     "content" : series.content,
                     "director" : series.director }
 
-    # for saving the series as collection it must be in lower cases without any spaces
+    # for saving the series as mongodb-collection it must be in lower cases without any spaces
     seriesname = series.name.lower()
     seriesname = seriesname.replace(" ", "")
     series_id = database[seriesname].insert(seriesObject)

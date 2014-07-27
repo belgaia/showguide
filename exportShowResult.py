@@ -10,12 +10,15 @@ print()
 
 form = cgi.FieldStorage()
 
-showName = form.getvalue("series_choice")
+showNames = []
+for choice in form.getvalue("series_choice"):
+    showNames.append(choice)
+
 targetDir = form.getvalue("targetDir")
 
-usedTargetDir = persistence.mongoExporteur.exportCollection(showName, targetDir)
+persistence.mongoExporteur.exportCollections(showNames, targetDir)
 
-print("Serie " + showName + " was exported to " + usedTargetDir)
+print("Serie(n) " + " exportiert nach " + targetDir)
 print()
 print("<p>")
 print("<a href='index.html'>Main Page</a><br>")

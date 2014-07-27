@@ -9,13 +9,14 @@ print("<form action='exportShowResult.py' method='post'>")
 
 print("<h1>Export</h1>")
 print("<p>")
-print("<p>Mit dem nachfolgenden Formular kann eine Serie ausgewaehlt werden, um diese in eine CSV-Datei zu exportieren.</p>")
+print("<p>Mit dem nachfolgenden Formular kann eine Serie oder mehrere Serien ausgewaehlt werden,"
+      "um den bisher gespeicherten Inhalt in eine CSV-Datei zu exportieren.</p>")
 
 shows = mongodbConnector.getAllSeries()
 
 print("<table width='50%'><tr>")
 print("<td>Serie:")
-print("<select name='series_choice' size='1'>")
+print("<select multiple name='series_choice' size='10'>")
 for showname in shows:
 	print("<option>" + showname + "</option>")
 print("</select></td></tr>")

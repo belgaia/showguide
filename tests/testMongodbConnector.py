@@ -8,8 +8,6 @@ from show import Show
 
 class TestMongoDbConnector(TestCase):
 
-
-
     def test_getAllSeries(self):
 
         print("getAllSeries test")

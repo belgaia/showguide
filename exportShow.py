@@ -17,6 +17,7 @@ shows = mongodbConnector.getAllSeries()
 print("<table width='50%'><tr>")
 print("<td>Serie:")
 print("<select multiple name='series_choice' size='10'>")
+print("<option selected>Alle</option>")
 for showname in shows:
 	print("<option>" + showname + "</option>")
 print("</select></td></tr>")

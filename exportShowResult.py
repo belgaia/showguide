@@ -10,13 +10,16 @@ print()
 
 form = cgi.FieldStorage()
 
-showNames = []
-for choice in form.getvalue("series_choice"):
-    showNames.append(choice)
-
 targetDir = form.getvalue("targetDir")
 
-persistence.mongoExporteur.exportCollections(showNames, targetDir)
+if form.getvalue("series_choice") == "Alle":
+    persistence.mongoExporteur.exportAllCollections(targetDir)
+else:
+    showNames = []
+    for choice in form.getvalue("series_choice"):
+        showNames.append(choice)
+
+    persistence.mongoExporteur.exportCollections(showNames, targetDir)
 
 print("Serie(n) " + " exportiert nach " + targetDir)
 print()

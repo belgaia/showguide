@@ -9,12 +9,27 @@ from series import Series
 
 class TestMongoDbConnector(TestCase):
 
-    def test_getAllSeries(self):
+    def test_getAllShows(self):
 
-        print("getAllSeries test")
+        print("getAllShows test")
 
-        self.series = mongodbConnector.getAllSeries()
-        #self.assertEquals(self.series, "Chicago Fire")
+        self.shows = mongodbConnector.getAllSeries()
+        self.assertIsNotNone(self.shows)
+
+    def test_getSeries(self):
+
+        print("getSeries test")
+
+        self.show = "Testserie"
+        self.identifier = "1x1"
+
+        self.documents = mongodbConnector.getSeries(self.show, self.identifier)
+        self.assertIsNotNone(self.documents)
+
+        for document in self.documents:
+            print("Document: " + document["name"])
+            self.assertEquals(document["name"], self.show)
+            self.assertEquals(document["identifier"], self.identifier)
 
     def test_saveNewShow(self):
 
@@ -43,6 +58,14 @@ class TestMongoDbConnector(TestCase):
 
         self.assertIsNotNone(self.seriesId)
 
+def test_updateSeries(self):
 
+        self.series = Series()
+        self.series.name = "Testserie"
+        self.series.identifier = "1x1"
+        self.series.content = "Neuer Content nach Update"
+
+        self.updatedSeries = mongodbConnector.updateSeries(self.series)
+        self.assertIsNotNone(self.updatedSeries)
 
 

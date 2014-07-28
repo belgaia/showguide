@@ -43,10 +43,9 @@ def createInfo(series):
                     "director" : series.director }
 
     # for saving the series as mongodb-collection it must be in lower cases without any spaces
-    seriesname = series.name.lower()
-    seriesname = seriesname.replace(" ", "")
-    series_id = database[seriesname].insert(seriesObject)
-    return series_id
+    collectionName = series.name.lower()
+    collectionName = collectionName.replace(" ", "")
+    return database[collectionName].insert(seriesObject)
 
 def getEpisodeguide(series):
 
@@ -55,7 +54,19 @@ def getEpisodeguide(series):
     documents = database[seriesName].find()
     return documents;
 
-series = Series()
-series.name = "TestSerie"
-series.content = "Test content mit Umlauten ä, ü, ö, ß."
-createInfo(series)
+def getSeries(show, identifier):
+
+    collectionName = show.lower()
+    collectionName = collectionName.replace(" ", "")
+
+    return database[collectionName].find( {'identifier' : identifier })
+
+def updateSeries(identifier, series):
+
+    collectionName = series.lower()
+    collectionName = collectionName.replace(" ", "")
+    series = database[collectionName].update({'identifier': identifier}, {"$set": series}, upsert=False)
+
+    return series
+
+

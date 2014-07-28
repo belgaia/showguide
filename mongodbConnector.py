@@ -4,7 +4,12 @@ from series import Series
 
 databaseName = 'showguide'
 mongoClient = pymongo.MongoClient("localhost", 27017)
-database = mongoClient.showguide
+database = mongoClient[databaseName]
+
+def setupDatabase(newDatabaseName):
+
+    databaseName = newDatabaseName
+    database = mongoClient[databaseName]
 
 def getAllSeries():
     seriesNames = []

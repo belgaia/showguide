@@ -9,6 +9,10 @@ from series import Series
 
 class TestMongoDbConnector(TestCase):
 
+    def setUp(self):
+
+        mongodbConnector.setupDatabase("testShowGuidePersistence")
+
     def test_getAllShows(self):
 
         print("getAllShows test")

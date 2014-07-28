@@ -31,7 +31,7 @@ print("<td>DVD Folgennummer:</td><td><input name='dvdepisodenumber' type='text'>
 print("<td>Folgenname (Deutsch):</td><td><input name='episodename_de' type='text'></td></tr>")
 print("<td>Folgenname (Englisch):</td><td><input name='episodename_en' type='text'></td></tr>")
 print("<td>Darsteller:</td><td><input name='actors' type='text'></td></tr>")
-print("<td>Inhalt:</td><td><textarea name='content' cols='50' rows='10'></textarea></td></tr>")
+print("<td valign='top'>Inhalt:</td><td><textarea name='content' cols='50' rows='10'></textarea></td></tr>")
 print("<td>Regie:</td><td><input name='director' type='text'></td></tr>")
 print("</table>")
 print("<input type='submit' value='Add Information'/>")

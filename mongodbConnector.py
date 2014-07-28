@@ -15,9 +15,6 @@ def getAllSeries():
     return seriesNames
 
 def addNewShow(show):
-    #series = {"name" : seriesname}
-    #series = {"description" : description}
-    #series_id = database.overview.insert(series)
 
     showObject = {"name" : show.name,
                   "description" : show.description
@@ -34,7 +31,7 @@ def removeSeries(seriesname):
 def createInfo(series):
 
     seriesObject = {"name" : series.name,
-                    "identifier" : series.season + "x" + series.episodenumber,
+                    "identifier" : str(series.season) + "x" + str(series.episodenumber),
                     "season" : series.season,
                     "episode_number" : series.episodenumber,
                     "general_episodenumber" : series.generalepisodenumber,
@@ -49,6 +46,7 @@ def createInfo(series):
     seriesname = series.name.lower()
     seriesname = seriesname.replace(" ", "")
     series_id = database[seriesname].insert(seriesObject)
+    return series_id
 
 def getEpisodeguide(series):
 

@@ -1,9 +1,9 @@
 #!/Python34/python
+from exporting import mongoExporteur
+
 __author__ = 'Agile Developers'
 
 import cgi
-
-import mongoExporteur
 
 print("Content-type: text/html; charset=utf8")
 print()

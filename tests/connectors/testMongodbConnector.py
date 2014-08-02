@@ -1,4 +1,4 @@
-import mongodbConnector
+from connectors import mongodbConnector
 
 __author__ = 'Agile Developers'
 

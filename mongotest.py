@@ -1,5 +1,5 @@
 #!/Python34/python
-import mongodbConnector
+from connectors import mongodbConnector
 
 series = mongodbConnector.getAllSeries()
 

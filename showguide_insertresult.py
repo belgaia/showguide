@@ -1,7 +1,7 @@
 #!/Python34/python
 import cgi
 
-import mongodbConnector
+from connectors import mongodbConnector
 from series import Series
 import helper
 

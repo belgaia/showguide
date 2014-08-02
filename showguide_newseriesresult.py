@@ -1,7 +1,7 @@
 #!/Python34/python
 import cgi
 
-import mongodbConnector
+from connectors import mongodbConnector
 from show import Show
 
 print("Content-type: text/html; charset=utf8")

@@ -1,8 +1,5 @@
-__author__ = 'Agile Developers'
-
+from exporting import mongoExporteur
 from unittest import TestCase
-
-import mongoExporteur
 
 
 class TestMongoExporteur(TestCase):

@@ -1,7 +1,9 @@
+from connectors import mongodbConnector
+
 __author__ = 'Agile Developers'
 import os
 import subprocess
-import mongodbConnector
+
 
 def exportCollection(showName, targetDir):
 

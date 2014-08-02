@@ -1,6 +1,5 @@
 #!/Python34/python
-__author__ = 'Agile Developers'
-import mongodbConnector
+from connectors import mongodbConnector
 
 print("Content-type: text/html; charset=utf8")
 print()

@@ -10,7 +10,12 @@ print()
 
 form = cgi.FieldStorage()
 series = form.getvalue("series_choice")
-print("<h1>" + series + "</h1>")
+imageName = series.lower()
+imageName = imageName.replace(" ", "")
+
+print("<table width='50%'><tr><td>")
+print("<img src='images/overview/" + imageName + ".jpg' alt='" + series + " Image'/></td>")
+print("<td><h1>" + series + "</h1></td></tr></table>")
 
 print("<h2>Allgemeine Infos</h2>")
 print()

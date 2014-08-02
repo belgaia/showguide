@@ -3,7 +3,7 @@ __author__ = 'Agile Developers'
 
 import cgi
 
-import persistence.mongoExporteur
+import mongoExporteur
 
 print("Content-type: text/html; charset=utf8")
 print()
@@ -13,13 +13,13 @@ form = cgi.FieldStorage()
 targetDir = form.getvalue("targetDir")
 
 if form.getvalue("series_choice") == "Alle":
-    persistence.mongoExporteur.exportAllCollections(targetDir)
+    mongoExporteur.exportAllCollections(targetDir)
 else:
     showNames = []
     for choice in form.getvalue("series_choice"):
         showNames.append(choice)
 
-    persistence.mongoExporteur.exportCollections(showNames, targetDir)
+    mongoExporteur.exportCollections(showNames, targetDir)
 
 print("Serie(n) " + " exportiert nach " + targetDir)
 print()

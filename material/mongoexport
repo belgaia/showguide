@@ -1,7 +1,0 @@
-Der folgende Befehl muss integriert werden in die Anwendung und automatisiert die Felder der Collection-Dokumente
-ermitteln.
-
-Beispiel: collection von chicagofire mit den Feldern id und name
-
-mongoexport --db showguide --collection chicagofire --csv --fields name,_id --out E:/Projekte/P003_Showguide/ch
-icagofire.csv
